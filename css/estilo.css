@@ -1,0 +1,710 @@
+/*LIMPANDO ESTILOS*/
+a{
+    text-decoration: none;
+}
+
+ul, li{
+    list-style: none;
+}
+
+*{
+    font-family: 'Open Sans';
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: normal;
+    color: #fff;
+    margin: 0;
+	padding: 0;
+}
+/*FIM RESET*/
+
+/*CONFIGURANDO CONTAINER*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0px auto;
+}
+
+.grid-4, .grid-6, .grid-8, .grid-12{
+    align-self: flex-start;
+    flex: 1;
+    margin: 0px 10px;
+}
+
+.grid-4{
+    flex: 0 0 calc(33.333% - 20px);
+}
+
+.grid-6{
+    flex: 0 0 calc(50% - 20px);
+}
+
+.grid-8{
+    flex: 0 0 calc(66.666% - 20px);
+}
+
+.grid-12{
+    flex: 0 0 calc(100% - 20px);
+    width: calc(100% - 20px) ;
+}
+/*FIM DO CONTAINER*/
+
+/*FORMATACOES GERAIS*/
+body{
+    background: #000;
+}
+
+h2{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    border-radius: 1.5px;
+    background: #FFCC33;
+    margin: 5px 0px 20px 0px;   
+}
+
+h2::before{
+    content: '';
+    display: block;
+    width: 270px;
+    height: 3px;
+    border-radius: 1.5px;
+    background: #FFCC33;
+    position: absolute;
+    bottom: 0px;
+    left: 65px;
+}
+
+p{
+    color: #aaaaaa
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+/*MENU*/
+.menu{
+    border-bottom: 5px solid #212121;
+    padding: 20px 40px;
+    display: flex;
+    position: relative;
+}
+.menu-logo img{
+    filter: invert(1);
+    width: 240px;
+}
+
+[data-menu="botao"]{
+    display: none;
+}
+
+.menu-nav{
+    flex: 1;
+    align-self: center;
+    text-align: right;
+}
+
+.menu-nav ul li{
+    display: inline-block;
+}
+
+.menu-nav ul li a{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.875em;
+    letter-spacing: .1em;
+    display: block;
+    padding-left: 16px;
+}
+
+.menu-nav ul li a:hover{
+    color: #FFCC33
+}
+
+/*INTRO*/
+.intro{
+    background: url('../img/background/bg-espaco.png') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 190px 0px;
+}
+
+.intro h1{
+    margin: 0px auto;
+    max-width: 680px;
+}
+
+/*HISTORIA*/
+.historia{
+    background: linear-gradient(to right, #000 50%, rgba(0,0,0, .5) 70%) , url('../img/background/bg-origem.jpg') no-repeat top center;
+    background-size: cover;
+    padding: 60px 0px;
+    border-top: 10px solid #212121;
+}
+
+.historia h2{
+    max-width: 360px;
+}
+
+.historia p{
+    max-width: 360px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+/*FILMES*/
+.filmes{
+    padding: 60px 0px;
+    border-top: 10px solid #212121;
+}
+
+.cabecalho h2{
+    max-width: 460px;
+    position: relative;
+}
+
+.cabecalho{
+    margin-bottom: 10px;
+}
+
+.lista-filmes{
+    display: flex;
+}
+
+.info-filme{
+    background-color: #212121;
+    border-left: 2px solid #FFCC33;
+    padding: 30px 0px 0px 20px;
+    width: calc(65% - 6px); 
+    position: relative;
+}
+
+.info-filme::before{
+    content: '';
+    display: block;
+    height: 60px;
+    border-left: 5px solid #212121;
+    border-bottom: 5px solid transparent;
+    border-top-right-radius: 5px;
+    position: absolute;
+    top: 0px;
+    right: -5px;
+}
+
+.info-filme::after{
+    content: '';
+    display: block;
+    height: 140px;
+    border-left: 5px solid #212121;
+    border-top: 5px solid transparent;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    bottom: 0px;
+    right: -5px;
+}
+
+.info-filme h3{
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.info-filme p{
+    font-size: 14px;
+    line-height: 1.5em;
+    width: 90%;
+    margin-top: 15px;;
+}
+
+.episodios{
+    position: absolute;
+    bottom: 30px;
+    width: 90%;
+    overflow: hidden;
+}
+
+.episodios ul{
+    display: flex;
+    justify-self: start;
+}
+
+.episodios li{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    flex: 0 0 38px;
+    margin: 15px 10px 0px 0px;
+    padding: 8px 0px;
+    border: 2px solid #FFCC33;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.episodios li:hover, .episodios li.ativo{
+    background: #FFCC33;
+    color: #212121;
+    transition: all .2s;
+}
+
+.imagem-filme{
+    width: 35%;
+}
+
+.imagem-filme img{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/*PERSONAGENS*/
+.personagens{
+    border-top: 10px solid #212121;
+    padding: 60px 0px;
+}
+
+.personagens > .container{
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 5px;
+}
+
+.personagens ul{
+    display: flex;
+    transition: .3s;
+    margin: 0px;
+}
+
+.personagens li img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.personagens .info-personagem{
+    background-color: #212121;
+    padding: 20px 0px 40px 15px;
+    position: relative;
+}
+
+.heroi{
+    border-top: 2px solid #224499;
+}
+
+.vilao{
+    border-top: 2px solid #D92A23;  
+}
+
+.personagens .info-personagem::before{
+    content: '';
+    display: block;
+    width: 120px;
+    border-top: 5px solid #212121;
+    border-bottom-left-radius: 5px;
+    border-right: 5px solid transparent;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+}
+
+.personagens .info-personagem::after{
+    content: '';
+    display: block;
+    width: 60px;
+    border-top: 5px solid #212121;
+    border-bottom-right-radius: 5px;
+    border-left: 5px solid transparent;
+    position: absolute;
+    bottom: -5px;
+    right: 0px;
+}
+
+.personagens .info-personagem h3{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.personagens .info-personagem p{
+    font-size: 12px;
+    line-height: 1.4em;
+    max-width: 95%;
+    margin-top: 5px;
+}
+
+.personagens button{
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0px 10px;
+    position: absolute;
+    bottom: 250px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
+
+.personagens button:hover, .personagens svg:hover{
+    border-color: #FFCC33;
+}
+
+.personagens button.anterior:hover{
+    background: url('../img/icones/seta-esquerda-amarelo.svg') no-repeat center center;
+} 
+
+.personagens button.proximo:hover{
+    background: url('../img/icones/seta-direita-amarelo.svg') no-repeat center center;
+} 
+
+.personagens button.anterior{
+    background: url('../img/icones/seta-esquerda.svg') no-repeat center center;
+    
+}
+
+.personagens button.proximo{
+    background: url('../img/icones/seta-direita.svg') no-repeat center center;
+    right: 0px;
+}
+
+/*SOBRE*/
+.sobre{
+    border-top: 10px solid #212121;
+    padding: 120px 0px;
+    background: linear-gradient(to right, #000 50%, rgba(0,0,0, .5) 70%) , url('../img/background/bg-sobre.jpg') no-repeat center left;
+    background-size: cover;
+}
+
+.sobre h2{
+    max-width: 360px;
+}
+
+.sobre p{
+    max-width: 360px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.sobre a:hover{
+    color: #FFCC33;
+    text-decoration: underline;
+}
+
+/*FOOTER*/
+.rodape{
+    border-top: 10px solid #212121;
+}
+
+.rodape-info{
+    padding: 30px 0px;
+}
+
+.rodape-info h3{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.rodape-info h3::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #FFCC33;
+    margin: 5px 0px 10px 0px;
+}
+
+.rodape-info p{
+    font-size: 14px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    line-height: 1.5em;
+}
+
+.rede-sociais li{
+    display: inline-block
+}
+
+.rede-sociais a{
+    display: block;
+    width: 40px;
+    padding-right: 5px;
+}
+
+
+.itens-secundarios li{
+    margin-bottom: 10px;
+}
+
+.itens-secundarios a{
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.itens-secundarios a::before{
+    content: '';
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-left: 8px solid currentColor;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    margin-right: 8px;
+}
+
+.itens-secundarios a:hover{
+    color: #FFCC33;
+}
+
+.rodape-copy{
+    border-top: 2px solid #212121;
+    padding: 20px 0px;
+}
+
+.rodape-copy p{
+    font-size: 14px;
+}
+
+/*MEDIA QUERY*/
+@media (max-width: 1200px){
+    /*HISTORIA*/
+    .historia{
+        background: linear-gradient(to right, #000 50%, rgba(0,0,0, .5) 70%) , url('../img/background/bg-origem-tablet.jpg') no-repeat center;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 960px){
+    /*CONTAINER*/
+    .container{
+        max-width: 760px;
+    }
+
+    /* MENU*/
+    .menu{
+        padding: 20px 15px;
+    }
+
+    /*INTRO*/
+    .intro{
+        padding: 120px 0px;
+    }
+
+    /*FILME*/ 
+    .info-filme h2{
+        font-size: 18px;
+    }
+    
+    .info-filme p{
+        font-size: 12px;
+        margin: 10px 0px 0px 0px;
+    }
+    
+    .episodios li{
+        font-size: 12px;
+        margin-top: 10px;
+        padding: 9px 0px;
+    }
+    
+
+}
+
+@media (max-width: 767px){
+    /*CLASSES GERAIS*/
+    h2{
+        font-size: 26px;
+    }
+    
+    h2::before{
+        width: 180px;
+    }
+
+    /*CONTAINER*/
+    .container{
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0px auto;
+    }
+
+    .grid-4, .grid-6, .grid-8, .grid-12{
+        margin: 0px;
+        flex: 0 0 100%;
+        width: 100%;
+        justify-self: flex-start;
+    }
+
+    /*MENU*/
+    [data-menu="botao"]{
+        display: block;
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+        flex:1;
+    }
+
+    [data-menu="botao"]::before{
+        content: "";
+        display: block;
+        width: 38px;
+        height: 2px;
+        margin-left: calc(100% - 40px);
+        border-radius: 6px;
+        background-color: #fff;
+        box-shadow: 0px 7px #fff, 0px -7px #fff;
+
+    }
+
+    .menu-logo img{
+        width: 200px;
+    }
+
+    .menu-nav{
+        display: none;
+        position: absolute;
+        text-align: left;
+        bottom: -158px;
+        right: 0px;
+        background-color: #212121;
+        border-radius: 3px;
+
+    }
+    
+    .menu-nav ul li{
+        display: block;
+        padding: 0px 20px;
+
+    }
+    
+    .menu-nav ul li a{
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.875em;
+        letter-spacing: .1em;
+        display: block;
+        padding-left: 0px;
+        margin: 15px 0px;
+    }
+
+    /*INTRO*/
+    .intro h1{
+        width: 300px;
+    }
+
+    /*HISTORIA*/
+    .historia{
+        background: linear-gradient(to top, #000 50%, rgba(0,0,0, .5) 80%) , url('../img/background/origem.jpg') no-repeat center;
+        background-size: cover;
+        padding: 400px 0px 60px 0px;
+        border-top: 10px solid #212121;
+    }
+    
+    /*FILMES*/    
+    .lista-filmes{
+        flex-direction: column;
+    }
+    
+    .info-filme{
+        width: 100%;
+        border-left: none;
+        border-top: 2px solid #FFCC33;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    
+    .info-filme::before, .info-filme::after{
+        display: none;
+    }
+    
+    .imagem-filme{
+        width: 100%;
+    }
+    
+    .imagem-filme img{
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .episodios{
+        position: static;
+        margin: 20px 0px
+    }
+
+    .episodios ul{
+        flex-wrap: wrap;
+    }
+
+    /*PERSONAGENS*/
+    .personagens button.anterior{
+        left: -6px;
+        
+    }
+    
+    .personagens button.proximo{
+        right: -6px;
+    }
+
+    /*SOBRE*/
+    .sobre{
+        padding: 240px 0px 60px 0px;
+        background: linear-gradient(to top, #000 50%, rgba(0,0,0, .5) 80%) , url('../img/background/bg-sobre-celular.jpg') no-repeat center;
+        background-size: cover;
+    }
+    
+    /*FOOTER*/
+    .rodape-info div:first-child{
+       margin-bottom: 30px;
+    }
+}
+
+/*CLASSES PARA ANIMACAO*/
+.ativar-botao{
+    display: block;
+    animation: animandoMenu .5s forwards;
+}
+
+@keyframes animandoMenu{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -15px, 0)
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.info-filme > section, .imagem-filme > img{
+    display: none;
+}
+
+.info-filme > section.ativo, .imagem-filme > img.ativo{
+    display: block;
+    animation: animandoFilmes .6s forwards;
+}
+
+@keyframes animandoFilmes{
+    from{
+        opacity: 0;
+        transform: translate3d(-12px, 0, 0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
