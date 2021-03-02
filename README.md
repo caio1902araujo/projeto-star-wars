@@ -29,6 +29,6 @@
 </ul>
 
 <h2>📝 Licença</h2>
-<p>Este projeto está sobe a licença MIT.</p>
+<p>Este projeto esta sobe a licença MIT.</p>
 
 <p>Feito por Caio Teixeira de Araujo.</p>
