@@ -1,8 +1,8 @@
 <h1>💻 Projeto Star Wars</h1>
-<p>Foi criado com o intuito de introduzir pessoas ao grande universo de star wars, onde abordo varios temas desse universo de uma maneira simples e rápida, alem de usar o projeto para por em pratica meus conhecimentos básicos de design e desenvolvimento web (html, css e javascript).</p>
+<p>Foi criado com o intuito de introduzir pessoas ao grande universo de Star Wars, onde abordo vários temas relacionados a saga de uma maneira simples e rápida, além de usar o projeto para por em pratica meus conhecimentos básicos de design e desenvolvimento web (HTML, CSS e JavaScript).</p>
 <p>No site cada seção aborda um respectivo tema sobre a saga, eles são:</p>
 <ol>
-<li>Breve historia da saga</li>
+<li>Breve história da saga</li>
 <li>Filmes em ordem e suas sinopses</li>
 <li>Apresentação dos personagens principais</li>
 <li>Explicação do projeto</li>
@@ -19,7 +19,7 @@
 </div>
 
 <h2>🚀 Como acessar o site </h2>
-<p>Para poder acessar o site é necessario ter instalado qualquer navegador atualizado na sua versão mais recente, menos o IE (Internet Explorer), pois o site não tem suporte para esse navegador e provavelmente não ira rodar. Para visualizar e testar o site em sua máquina, basta clicar <a href='https://caio1902araujo.github.io/projeto-star-wars/'> aqui</a>.
+<p>Para poder acessar o site é necessário ter instalado qualquer navegador atualizado na sua versão mais recente, menos o IE (Internet Explorer), pois o site não tem suporte para esse navegador e provavelmente não irá rodar. Para visualizar e testar o site em sua máquina, basta clicar <a href='https://caio1902araujo.github.io/projeto-star-wars/'> aqui</a>.
 
 <h2>🛠 Linguagens utilizadas </h2>
 <ul>
@@ -29,6 +29,6 @@
 </ul>
 
 <h2>📝 Licença</h2>
-<p>Este projeto esta sobe a licença MIT.</p>
+<p>Este projeto está sobe a licença MIT.</p>
 
 <p>Feito por Caio Teixeira de Araujo.</p>
